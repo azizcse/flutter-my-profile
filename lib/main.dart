@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:mi_card/util/flutter_key_test.dart';
 import 'dart:async';
+
+var routes = <String, WidgetBuilder>{
+  "/home": (BuildContext context) => HomeMaterial(),
+};
+
 void main() {
-  runApp(MyApp());
+  runApp(MaterialApp(
+    home: MyApp(),
+    routes: routes,
+  ));
 }
 
 class MyApp extends StatefulWidget {
@@ -59,12 +67,7 @@ class ProfilePage extends State<MyApp> {
               color: Colors.white,
               margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
               child: ListTile(
-                onTap: (){
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => HomeMaterial()),
-                  );
-                },
+                onTap: (){ Navigator.pushNamed(context, "/home");},
                 leading: Icon(
                   Icons.phone,
                   color: Colors.teal,

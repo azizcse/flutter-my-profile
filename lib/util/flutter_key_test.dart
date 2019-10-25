@@ -45,7 +45,7 @@ class _HomeMaterialState extends State<HomeMaterial> {
                               onSaved: (val) =>
                                   setState(() => _user.lastName = val)),
                           Container(
-                            padding: const EdgeInsets.fromLTRB(0, 50, 0, 20),
+                            padding: const EdgeInsets.fromLTRB(0, 10, 0, 20),
                             child: Text('Subscribe'),
                           ),
                           SwitchListTile(
@@ -54,7 +54,7 @@ class _HomeMaterialState extends State<HomeMaterial> {
                               onChanged: (bool val) =>
                                   setState(() => _user.newsletter = val)),
                           Container(
-                            padding: const EdgeInsets.fromLTRB(0, 50, 0, 20),
+                            padding: const EdgeInsets.fromLTRB(0, 10, 0, 20),
                             child: Text('Interests'),
                           ),
                           CheckboxListTile(
