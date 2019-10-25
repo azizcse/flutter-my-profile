@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:mi_card/util/flutter_key_test.dart';
+import 'dart:async';
 void main() {
   runApp(MyApp());
 }
@@ -58,6 +59,12 @@ class ProfilePage extends State<MyApp> {
               color: Colors.white,
               margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
               child: ListTile(
+                onTap: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomeMaterial()),
+                  );
+                },
                 leading: Icon(
                   Icons.phone,
                   color: Colors.teal,
