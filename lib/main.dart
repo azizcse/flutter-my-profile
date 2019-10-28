@@ -30,6 +30,18 @@ class ProfilePage extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.teal,
+          centerTitle: true,
+          title: Text(
+            "Prifile",
+            style: TextStyle(
+              fontFamily: 'Pacifico',
+              fontWeight: FontWeight.bold,
+              letterSpacing: 2.0,
+            ),
+          ),
+        ),
         backgroundColor: Colors.teal,
         body: SafeArea(
             child: Column(
@@ -67,7 +79,9 @@ class ProfilePage extends State<MyApp> {
               color: Colors.white,
               margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
               child: ListTile(
-                onTap: (){ Navigator.pushNamed(context, "/home");},
+                onTap: () {
+                  Navigator.pushNamed(context, "/home");
+                },
                 leading: Icon(
                   Icons.phone,
                   color: Colors.teal,
