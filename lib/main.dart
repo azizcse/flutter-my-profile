@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:mi_card/pages/profile_page_design.dart';
 import 'package:mi_card/util/flutter_key_test.dart';
 import 'dart:async';
 
 var routes = <String, WidgetBuilder>{
   "/home": (BuildContext context) => HomeMaterial(),
+  "/design":(BuildContext context)=>UserProfile(),
 };
 
 void main() {
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     home: MyApp(),
     routes: routes,
   ));

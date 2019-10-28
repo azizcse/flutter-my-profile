@@ -4,7 +4,17 @@ class UserProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightBlue,
+      backgroundColor: Colors.lightBlueAccent,
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.lightBlueAccent,
+        child: Icon(Icons.add),
+        onPressed: () {
+          showModalBottomSheet(
+            context: context,
+            //builder: (context) => AddTaskScreen(),
+          );
+        },
+      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -35,7 +45,7 @@ class UserProfile extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  '3 tasks',
+                  '3 Tasks',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 18,
@@ -54,7 +64,7 @@ class UserProfile extends StatelessWidget {
                   topRight: Radius.circular(20.0),
                 ),
               ),
-              child: Text("Task will added here"),
+              child: null,//TasksList(),
             ),
           ),
         ],
